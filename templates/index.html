@@ -1,11 +1,13 @@
 <!doctype html>
 <html>
-<head>
-  <title>Sample Home Page</title>
-</head>
-<body>
+    <head>
+         <title>{% block title%} index base {% endblock%}</title>
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <script src="http://code.jquery.com/jquery.js"></script>
+    </head>
+    <body>
+        <h1>{%block header%}Header {%endblock%}</h1>
+        {%block content %} Form {%endblock%}
 
-<h1>This is the sample home page.</h1>
-
-</body>
+    </body>
 </html>

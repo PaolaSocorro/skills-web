@@ -1,0 +1,53 @@
+{% extends "index.html" %}
+
+{%block title%} Application Form {%endblock%}
+<h1>{%block header%} Application Form {%endblock%}</h1>
+<br>
+
+
+
+{%block content%}
+
+<div id="instruction">
+    <p> Hello, <br>
+        Please enter your name and lastname. Do not include numbers. <br>
+        Enter your salaray requirement using only numbers.<br>
+        Select the job you are applying for from the Job List</p>
+</div>
+
+<div id="submitForm"> 
+    <form action = "/application" method="post">
+        <span id="textboxWrapper">
+        First  Name: <input id="firstname" type="text" name="fname"> <br><br>
+        Last   Name: <input id="lastname" type="text" name="lname"> <br><br>
+        Your Salary: <input id="salary" type="text" name="sal"> <br><br>
+        </span>
+          Job List: <select id="joblist" name="job">
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="QA engineer">QA Engineer</option>
+            <option value="Product Manager">Product Manager</option>
+        </select>
+        <br> <br>
+        <input id="submitBtn" type="submit"> 
+
+
+    </form>
+</div>
+
+
+
+
+{%endblock%}
+
+
+
+   <!--  Their first and last name (as separate fields),
+    Their salary requirement as a number, and
+    Which job they are applying for, from a list of:
+        Software Engineer
+        QA Engineer
+        Product Manager
+
+It should also have a submit button that submits the form to the URL /application. This should be a POST request.
+
+It should have a large heading and some explanatory text. -->
